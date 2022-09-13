@@ -5,3 +5,7 @@ h1 {
 #header1 {
     color: green;
 }
+
+#neco :hoover {
+    color: red;
+}
