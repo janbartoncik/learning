@@ -6,5 +6,5 @@ from email.errors import FirstHeaderLineIsContinuationDefect
 n = 5000
 while n > 0 :
     print(n)
-    n = n - 10
+    n = n - 1
 print("BOOOM!!!")
