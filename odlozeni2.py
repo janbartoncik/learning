@@ -1,4 +1,5 @@
 import re
+hand = 'From: fsdkjfh'
 
-cislo = '10,000,30'
-
+if re.search('^From:', hand):
+    print(hand)
