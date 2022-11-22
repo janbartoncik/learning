@@ -1,0 +1,18 @@
+
+import re
+
+my_list = ['10001', '10_002 Kč', '10.003', '10,004', '10005,10', '100 06 Kč']
+
+def ultraformat3000():
+    for neco in my_list:
+        x = re.sub("[^0-9]",'', neco)
+        print(x)
+
+ultraformat3000()
+
+import locale
+
+locale.setlocale( locale.LC_ALL, '' )
+test = locale.currency(321123)
+print(test)
+
