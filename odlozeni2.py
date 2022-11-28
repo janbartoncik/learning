@@ -1,5 +1,2 @@
-import re
-hand = 'From: fsdkjfh'
-
-if re.search('^From:', hand):
-    print(hand)
+num = '1.000.01'
+print(float(num))
