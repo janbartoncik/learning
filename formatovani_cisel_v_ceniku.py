@@ -9,4 +9,4 @@ for i in my_list:
     if len(x.split(".")) > 1:
         end = x.split(".")[-1]
         x = "".join([i for i in x.split(".")[:-1]]) + "." + end
-    print(float(x))
+    print(end)
