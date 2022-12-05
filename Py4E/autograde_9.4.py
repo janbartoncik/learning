@@ -5,11 +5,23 @@
 
 import os
 
-os.chdir('\Users\PC\Documents\GitHub\learning\Py4E\')
+os.chdir('/Users/janbartoncik/Documents/GitHub/learning/Py4E')
 
-file = 'mbox-short.txt'
+file = open('mbox-short.txt')
 names = dict()
+name = None
+topoccure = None
 
 for line in file:
-    x = line.startswith("From ")
-    print(x)
+    if line.startswith('From '):
+        x = line.split()
+        sender = x[1]
+        names[sender] = names.get(sender, 0) + 1
+
+name = None
+topoccure = None
+for k,v in names.items():
+    if topoccure is None or v > topoccure:
+        name = k
+        topoccure = v
+print(name, topoccure)
