@@ -13,3 +13,12 @@ ctx.verify_mode = ssl.CERT_NONE
 url = 'http://py4e-data.dr-chuck.net/known_by_Torran.html'
 html = urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, "html.parser")
+i=1
+
+while i < 3:
+    tags = soup('a')
+    for tag in tags:
+        print(tag.get('href', None))
+        i= i+1
+
+# použít while funkci 2x
